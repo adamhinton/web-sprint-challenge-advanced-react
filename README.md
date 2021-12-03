@@ -25,9 +25,9 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 You will also need to build the two tests in the `CheckoutForm.test.js` file and make sure they are testing what the test title says they are.
 
 ## Project Setup
-* [ ] Run npm install to install your dependencies.
-* [ ] Run npm start to run your frontend and backend code automatically.
-* [ ] Note your backend code will run automatically when your run npm start. There is no need to seperately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
+* [X ] Run npm install to install your dependencies.
+* [ X] Run npm start to run your frontend and backend code automatically.
+* [ X] Note your backend code will run automatically when your run npm start. There is no need to seperately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
 
 ## Project Instructions
 
@@ -80,13 +80,13 @@ In this project, you will build the retrieve data from a public api, add in a fa
 
 * [X ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic. **You do not need to use useLocalStorage to complete this task! localStorage is not necessary for this project. Simply reproduce all functionality for the useForm custom hook to complete.**
 
-* [ ]X Try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
+* X[ ]X Try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
 
 ### Testing the Checkout Form
-* [ ] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
-* [ ] Fill out code necessary to test that that Checkout form renders without errors.
-* [ ] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
-* [ ] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working.
+* [ X] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
+* [ X] Fill out code necessary to test that that Checkout form renders without errors.
+* [X ] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
+* [X] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working.
 
 ## Important Notes:
 * Again, unlike other projects, the local server used here can not be accessed through the browser. For this and the rest of your sprint challenges, test the functioning of the server directly through your axios calls.
@@ -117,9 +117,17 @@ test("displays plants in cart", () => {
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers below.
 
 1. What are the main differences between a stateful and a functional component?
+  Stateful components manage their own internal state. They extend React Component. Functional components don't use state, so if you don't need state but only need props for instance, or nothing at all, use a functional component.
 
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
+  componentWillMount is called when the component first mounts to the browser. componentWillUpdate calls any time the component updates, like when state changes.
 
 3. Define stateful logic.
+  Stateful logic is functions or any kind of code that affects or has to do with state. useState or other hooks, for instance.
 
 4. What are the three step of creating a successful test? What is done in each phase? 
+  Arrange: Bringing in the component you want to test, for instnace. Like render(<useForm/>).
+
+  Act: Defining variables, userEvents, things like that. Defining what you want to test.
+
+  Assert: Telling your test what you expect to see. For instnace, that I expect a form to be in the document.
