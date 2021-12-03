@@ -16,6 +16,7 @@ const initialValue = {
 
 const CheckoutForm = (props) => {
 
+  //I don't think it's right to put both showSuccessMessage and setShowSuccessMessage in here, but I couldn't get it to work any other way. If I only put in showSuccessMessage then set... would be undefined, and if I only put in set... then show... would be undefined.
 const [values, handleChanges, showSuccessMessage, setShowSuccessMessage] = useForm(initialValue)
 
   const handleSubmit = (e) => {
